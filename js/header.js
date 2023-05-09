@@ -3,33 +3,43 @@
 
 //웹브라우저에 html , css , js , image를 모두 불러들여서 렌더링 준비가 끝나면
 //그때 function의 블럭 안쪽 { } 실행하라!
-window.onload = function(){     
+window.onload = function () {
+  // 1. .header를 js로 저장해보자 (변수를 정의하자)
+  let header = document.querySelector(".header");
+  // 2. .nav를 js로 저장해보자 (변수를 정의하자)
+  let nav = document.querySelector(".nav");
 
+  // console.log(header);
+  // console.log(nav);
 
-// 1. .header를 js로 저장해보자 (변수를 정의하자)
-    let header = document.querySelector(".header");
-// 2. .nav를 js로 저장해보자 (변수를 정의하자)
-    let nav = document.querySelector(".nav");
+  // nav에 마우스 오버 처리 (html요소에 마우스 오버 처리하는 법)
+  nav.addEventListener("mouseenter", function () {
+    // header의 높이를 260px로 변경하고싶다.
+    // header.style.height = "260px"; //css 직접 변경시키는건 사실 좋은방법은 아님
 
-// console.log(header);
-// console.log(nav);
+    //class를 작성해서 변경시켜보자 (class명 앞에 . 찍지않기)
+    header.classList.add("header-active");
+  });
+  // nav에 마우스 아웃 처리 (html요소에 마우스 아웃 처리하는 법)
+  nav.addEventListener("mouseleave", function () {
+    // header의 높이를 100px로 변경하고싶다.
+    // header.style.height = "100px";
 
-// nav에 마우스 오버 처리 (html요소에 마우스 오버 처리하는 법)
-    nav.addEventListener("mouseenter", function () {
-        // header의 높이를 260px로 변경하고싶다.
-        // header.style.height = "260px"; //css 직접 변경시키는건 사실 좋은방법은 아님
+    //add된 class를 제거해서 변경시키자
+    header.classList.remove("header-active");
+  });
 
-        //class를 작성해서 변경시켜보자 (class명 앞에 . 찍지않기)
-        header.classList.add("header-active");
-    });
-// nav에 마우스 아웃 처리 (html요소에 마우스 아웃 처리하는 법)
-    nav.addEventListener("mouseleave", function () {
-        // header의 높이를 100px로 변경하고싶다.
-        // header.style.height = "100px";
-        
-        //add된 class를 제거해서 변경시키자
-        header.classList.remove("header-active");
-    });
+  // 모바일 버튼
+  let mbNav = document.querySelector(".mb-nav");
+  mbNav.addEventListener("click", function () {
+    //현재 mbNav에 mb-nav-active를 가지고 있는지 검토
+    let hasActive = false;
 
-    
+    // if-else문 삽입
+    if (hasActive === false) {
+      mbNav.classList.add("mb-nav-active");
+    } else {
+      mbNav.classList.remove("mb-nav-active");
+    }
+  });
 };

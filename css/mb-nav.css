@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+
+.mb-nav {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    z-index: 999999;
+    width: 30px;
+    height: 25px;
+    border: 0;
+    cursor: pointer;
+    font-size: 0;
+    /* overflow: hidden; */
+    background: #fff;
+}
+.mb-nav span {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+}
+.mb-nav span:nth-child(1) {
+    background: #222;
+    top: 0;
+    /* transform의 중심점 default:50% 50%임 */
+    transform-origin: 0 0;
+    transition: transform 0.5s;
+}
+.mb-nav span:nth-child(2) {
+    background: #0072ff;
+    width: 50%;
+    top: calc(50% - 1px);
+    left: 50%;
+    transition: opacity 0.3s;
+    
+}
+.mb-nav span:nth-child(3) {
+    background: #222;
+    top: 100%;
+    opacity: 0;
+    /* transform의 중심점 default:50% 50%임 */
+    transform-origin: 0 100%;
+    transition: opacity 0.3s, transform 0.5s;
+}
+.mb-nav-active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, -2px);
+}
+.mb-nav-active span:nth-child(2) {
+    display: none;
+}
+.mb-nav-active span:nth-child(3) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(5px, 2px);
+
+}

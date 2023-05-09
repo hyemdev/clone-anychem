@@ -1,3 +1,4 @@
+
 .header {
   position: relative;
   display: flex;
@@ -8,8 +9,8 @@
   height: 100px;
   background: #fff;
   overflow: hidden;
-  transition: height 0.5s;
   padding: 0 100px;
+  transition: height 0.5s, padding 0.5s;
   z-index: 9999;
 }
 .header::before {
@@ -35,11 +36,13 @@
 }
 
 .logo {
-  padding-top: 32px;
+  margin-top: 32px;
+  transition: margin 0.5s;
 }
 
 .nav {
   margin-left: 250px;
+  transition: margin 0.5s;
 }
 
 .gnb {
@@ -48,6 +51,7 @@
   /* 가로 여백이 남는 경우 여백처리(여백없이 균등정렬)*/
   /* justify-content: space-between; */
   gap: 0 50px;
+  transition: gap 0.5s;
 }
 .gnb > li {
   /* position: relative; */
@@ -88,7 +92,7 @@
   padding: 18px;
   background: #f5f9ff;
   border-radius: 36px;
-  margin-top: 25px;
+  margin-top: 23px;
 }
 .member {
   display: flex;
@@ -104,3 +108,51 @@
   font-family: "noto Sans KR";
 }
 
+/* header 반응형 */
+@media screen and (max-width:1720px) {
+  .nav {
+    margin-left: 90px;
+  }
+}
+@media screen and (max-width:1560px) {
+  .header {
+    padding: 0 70px;
+  }
+  .gnb {
+    gap: 0 30px;
+  }
+}
+@media screen and (max-width:1400px) {
+  .side-wrap {
+    display: none;
+    }
+}
+@media screen and (max-width:1200px) {
+  .header {
+    padding: 0 40px;
+  }
+  .nav {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width:1080px) {
+  .gnb > li > a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width:1020px) {
+  .gnb {
+    gap: 0 20px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .header {
+    height: 75px;
+  }
+  .logo {
+    margin-top: 20px;
+  }
+  .nav {
+    display: none;
+  }
+}
