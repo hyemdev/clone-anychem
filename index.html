@@ -58,34 +58,85 @@
     <meta property="og:url" content="http://www.any-chem.com" />
 
     <title>애니켐</title>
-    <link rel="stylesheet" href="css/style.css" />
-
+    
     <!-- html5shiv 적용 -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- prefix 적용 -->
-    <script src="js/prefixfree.min.js"></script>
-    <!-- respond 적용 -->
-    <script src="js/respond.min.js"></script>
-    <!-- reset.css 적용 -->
-    <link rel="stylesheet" href="css/reset.css" />
-
-    <!-- 폰트 직링(예외적 사안임) -->
-    <link
+      <![endif]-->
+      
+      <!-- prefix 적용 -->
+      <script src="js/prefixfree.min.js"></script>
+      <!-- respond 적용 -->
+      <script src="js/respond.min.js"></script>
+      <!-- reset.css 적용 -->
+      <link rel="stylesheet" href="css/reset.css" />
+      
+      <!-- 폰트 직링(예외적 사안임) -->
+      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+      />
+      <link rel="stylesheet" href="css/style.css" />
+      <script src="js/header.js"></script>
   </head>
 
   <body>
     <div class="wrap">
       <!-- 헤더 -->
-      <header class="header"></header>
+      <header class="header">
+        <a href="#" class="logo"><img src="images/logo.png" alt="애니켐"></a>
+        <nav class="nav">
+          <ul class="gnb">
+            <li><a href="#">회사소개</a>
+              <ul class="submenu">
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">오시는 길</a></li>
+              </ul>
+            </li>
+            <li><a href="#">탄소중립대응 친환경 제품</a>
+              <ul class="submenu">
+                <li><a href="#">플라스틱 포장재</a></li>
+                <li><a href="#">농업용 필름</a></li>
+                <li><a href="#">자동차용 소재</a></li>
+                <li><a href="#">코팅종이</a></li>
+              </ul>
+            </li>
+            <li><a href="#">뉴스.보도자료</a>
+              <ul class="submenu">
+                <li><a href="#">개발제품 뉴스.보도자료</a></li>
+                <li><a href="#">탄소중립 관련뉴스.보도자료</a></li>
+              </ul>
+            </li>
+            <li><a href="#">인증</a>
+              <ul class="submenu">
+                <li><a href="#">UL인증</a></li>
+                <li><a href="#">녹색인증</a></li>
+              </ul>
+            </li>
+            <li><a href="#">제품문의</a>            
+              <ul class="submenu">
+                <li><a href="#">제품문의</a></li>
+              </ul>
+            </li>
+            <li><a href="#">고객센터</a>
+              <ul class="submenu">
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      <div class="side-wrap">
+        <ul class="member">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">ENG</a></li>
+        </ul>
+      </div>
+      </header>
       <!-- //헤더 -->
 
       <!-- 비주얼 -->

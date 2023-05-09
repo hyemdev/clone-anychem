@@ -1,0 +1,106 @@
+.header {
+  position: relative;
+  display: flex;
+  /* 양끝 여백 포함 균등분할 */
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  overflow: hidden;
+  transition: height 0.5s;
+  padding: 0 100px;
+  z-index: 9999;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+
+  /* 투명도 0 : 안보임 */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.header-active {
+  height: 260px !important;
+  box-shadow: 0px 12px 12px -17px rgba(0, 0, 0, 0.25);
+}
+
+.header-active::before {
+  opacity: 1;
+}
+
+.logo {
+  padding-top: 32px;
+}
+
+.nav {
+  margin-left: 250px;
+}
+
+.gnb {
+  /* display:flex; 라고 작성하면 flex-container가 된다 */
+  display: flex;
+  /* 가로 여백이 남는 경우 여백처리(여백없이 균등정렬)*/
+  /* justify-content: space-between; */
+  gap: 0 50px;
+}
+.gnb > li {
+  /* position: relative; */
+}
+
+.gnb > li > a {
+  display: block;
+  white-space: nowrap;
+  font-size: 18px;
+  color: #222;
+  line-height: 100px;
+  letter-spacing: -0.3px;
+  font-weight: 500;
+  font-family: "noto Sans KR";
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.submenu {
+}
+.submenu > li {
+}
+.submenu > li > a {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  color: #08151d;
+  font-weight: 400;
+  font-family: "noto sans kr";
+  white-space: nowrap;
+}
+.submenu > li > a:hover {
+  color: #999;
+}
+
+.side-wrap {
+  padding: 18px;
+  background: #f5f9ff;
+  border-radius: 36px;
+  margin-top: 25px;
+}
+.member {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 26px;
+}
+.member li {
+}
+.member li a {
+  font-size: 13px;
+  color: #7e7e7e;
+  font-weight: 700;
+  font-family: "noto Sans KR";
+}
+
