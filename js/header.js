@@ -4,6 +4,7 @@
 //웹브라우저에 html , css , js , image를 모두 불러들여서 렌더링 준비가 끝나면
 //그때 function의 블럭 안쪽 { } 실행하라!
 window.addEventListener("load", function () {
+
     // toggle 기능 사용해보기
     // mbNav.classList.toggle("mb-nav-active");
 
@@ -58,5 +59,27 @@ window.addEventListener("load", function () {
                 duration: 300,
             });
         });
+    });
+
+    
+    let visual = document.querySelector(".visual");
+
+
+    //스크롤에 의한 position:fixed, relative 교체
+    window.addEventListener("scroll", function(){
+        //스크롤 위치값 파악. 변수에 저장
+        let scY = window.scrollY;
+        //classList add() / remove() 를 활용
+        if(scY > 0 ) {
+            //스크롤바가 아래로 조금이라도 이동
+            //position: fixed;
+            header.classList.add("header-fixed");
+            // visual.classList.add("visual-fixed");
+        } else {
+            //스크롤바가 최상단에 위치
+            //position: relative;            
+            header.classList.remove("header-fixed");
+            // visual.classList.remove("visual-fixed");
+        };
     });
 });

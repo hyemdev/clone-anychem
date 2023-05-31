@@ -42,6 +42,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/style.css" />
         <!-- <script src="js/mb-nav.js"></script> -->
+
+        <!-- aos.js -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <!-- anime.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -49,9 +53,11 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
         <!-- js파일 연동 -->
+        <script src="js/script.js"></script>
         <script src="js/header.js"></script>
         <script src="js/mb-nav.js"></script>
         <script src="js/visual.js"></script>
+        <script src="js/goods.js"></script>
     </head>
 
     <body>
@@ -191,17 +197,17 @@
                     <div class="sw-visual-control">
                         <div class="sw-visual-pg"></div>
                     </div>
-                    <div class="visual-txt">
+                    <div class="visual-txt" data-aos="fade-up" data-aos-duration="1000">
                         <div class="inner">
-                            <h2 class="visual-title">
+                            <h2 class="visual-title" data-aos="fade-up" data-aos-duration="1000">
                                 탄소배출, 지금 멈추지 않으면 <br />
                                 자연은 연기처럼 사라집니다
                             </h2>
-                            <p class="visual-desc">
+                            <p class="visual-desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                                 탄소중립 대응ㆍ친환경 제품을 끊임없이 도전, <br />
                                 연구하는 소재전문 업체 애니켐 입니다.
                             </p>
-                            <a href="#" class="visual-link">회사소개<i class="fa-solid fa-angle-right"></i></a>
+                            <a href="#" class="visual-link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">회사소개<i class="fa-solid fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -210,7 +216,88 @@
 
             <!-- 굿즈 -->
             <section class="goods">
-                <div class="inner"></div>
+                <div class="goods-wrap">
+                    <div class="goods-menu">
+                        <h2 class="goods-title">
+                            <strong>탄소중립 대응<br /></strong>
+                            친환경 제품
+                        </h2>
+                        <p class="goods-desc">
+                            탄소중립 대응 친환경 제품을 끊임없이 도전,<br />
+                            연구하는 소재전문 업체입니다.
+                        </p>
+                        <ul class="goods-list">
+                            <li><a href="#">플라스틱 포장재</a></li>
+                            <li><a href="#">자동차용 소재</a></li>
+                            <li><a href="#">농업용 필름</a></li>
+                            <li><a href="#">코팅종이</a></li>
+                        </ul>
+                        <div class="sw-goods-control">
+                            <button class="sw-goods-prev"><img src="images/prev.png" alt="이전페이지" /></button>
+                            <button class="sw-goods-pause"><i class="fa-solid fa-pause"></i></button>
+                            <button class="sw-goods-next"><img src="images/next.png" alt="다음페이지" /></button>
+                        </div>
+                    </div>
+                    <div class="goods-slide">
+                        <div class="swiper sw-goods">
+                            <div class="swiper-wrapper">
+                                <!-- json 변경 예정 -->
+                                <div class="swiper-slide">
+                                    <a href="#" class="good-link">
+                                        <div class="good-item">
+                                            <div class="good-item-img">
+                                                <img src="images/good1.jpg" alt="제품이미지" />
+                                            </div>
+                                            <div class="good-item-txt">
+                                                <p>플라스틱 포장재</p>
+                                                <span>친환경 농업용 멀칭 필름, 녹색기술인증 제품</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="good-link">
+                                        <div class="good-item">
+                                            <div class="good-item-img">
+                                                <img src="images/good2.jpg" alt="제품이미지" />
+                                            </div>
+                                            <div class="good-item-txt">
+                                                <p>플라스틱 포장재</p>
+                                                <span>친환경 농업용 멀칭 필름, 녹색기술인증 제품</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="good-link">
+                                        <div class="good-item">
+                                            <div class="good-item-img">
+                                                <img src="images/good3.jpg" alt="제품이미지" />
+                                            </div>
+                                            <div class="good-item-txt">
+                                                <p>플라스틱 포장재</p>
+                                                <span>친환경 농업용 멀칭 필름, 녹색기술인증 제품</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="good-link">
+                                        <div class="good-item">
+                                            <div class="good-item-img">
+                                                <img src="images/good4.jpg" alt="제품이미지" />
+                                            </div>
+                                            <div class="good-item-txt">
+                                                <p>플라스틱 포장재</p>
+                                                <span>친환경 농업용 멀칭 필름, 녹색기술인증 제품</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- //굿즈 -->
 

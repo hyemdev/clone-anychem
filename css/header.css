@@ -1,5 +1,7 @@
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     /* 양끝 여백 포함 균등분할 */
     justify-content: space-between;
@@ -29,7 +31,12 @@
     height: 260px !important;
     box-shadow: 0px 12px 12px -17px rgba(0, 0, 0, 0.25);
 }
-
+.header-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 .header-active::before {
     opacity: 1;
 }
@@ -145,6 +152,10 @@
 @media screen and (max-width: 1080px) {
     .gnb > li > a {
         font-size: 16px;
+    }
+    .header{
+        height: 75px;
+        padding: 0 20px;
     }
 }
 @media screen and (max-width: 1020px) {
