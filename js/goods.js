@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
     let swGoods;
-    const SLIDECOUNT = 4;
+    // const SLIDECOUNT = 4;
 
     const getData = async function () {
         //async는 함수앞에 붙이자
@@ -18,12 +18,14 @@ window.addEventListener("load", function () {
 
     function makeSlide(_data) {
         let html = ``;
+        let copyArr = [..._data.goods];
+        //swiper 버전에 따른 문제 발생 (강제 목록추가 제거)
+        // //배열이 4개 이하라면 배열개수를 두배로 복사해보자
 
-        //배열이 4개 이하라면 배열개수를 두배로 복사해보자
-        let copyArr = [];
-        if (_data.goods.length <= SLIDECOUNT) {
-            copyArr = [..._data.goods, ..._data.goods];
-        }
+        // if (_data.goods.length <= SLIDECOUNT) {
+        //     copyArr = [..._data.goods, ..._data.goods];
+        // }
+
         copyArr.forEach((item) => {
             let temp = `
             <div class="swiper-slide">
@@ -47,28 +49,46 @@ window.addEventListener("load", function () {
     }
 
     function makeSlideShow() {
-        swGoods = new Swiper(".sw-goods", {
+        swGoods = new Swiper(".goods-slide > .swiper-container", {
             slidesPerView: 3,
+            spaceBetween: 20,
             loop: true,
-            speed: 800,
+            speed: 1000,
             navigation: {
                 prevEl: ".sw-goods-prev",
                 nextEl: ".sw-goods-next",
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
             },
             autoplay: {
                 delay: 1500,
                 disableOnInteraction: false,
             },
+            
         });
 
         swGoods.on("slideChange", function () {
-            let count = this.realIndex % SLIDECOUNT;
-            focusMenu(count);
+            // let count = this.realIndex % SLIDECOUNT;
+            // focusMenu(count);
+            focusMenu(this.realIndex);
         });
+        
     }
 
     function focusMenu(_index) {
-        let lis = document.querySelectorAll(".goods-list li a");
+        let lis = document.querySelectorAll(".goods-list li");
         lis.forEach((item, index) => {
             if (index === _index) {
                 //순서번호랑 슬라이드 번호가 같다면 add
@@ -78,6 +98,7 @@ window.addEventListener("load", function () {
                 item.classList.remove("focus");
             }
         });
+        
     }
 
     function makeMenu(_data) {
@@ -99,8 +120,26 @@ window.addEventListener("load", function () {
                 swGoods.slideToLoop(index);
             };
         });
+        
+    focusMenu(0);
     }
-
+    //슬라이드 멈추기/재생하기
+    const bt = document.querySelector(".sw-goods-pause");
+    const icon = bt.querySelector(".fa-pause");
+    let swGoodsState = "play";
+    bt.onclick = () => {
+        if (swGoodsState === "play") {
+            //슬라이드 멈춤
+            swGoods.autoplay.stop();
+            swGoodsState = "stop";
+            icon.classList.add("fa-play");
+        } else {
+            //슬라이드 재생
+            swGoods.autoplay.start();
+            swGoodsState = "play";
+            icon.classList.remove("fa-play");
+        }
+    };
     getData();
     // fetch("data/gooddata.json")
     //     .then((res) => res.json())

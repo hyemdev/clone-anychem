@@ -10,13 +10,11 @@
         <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
-        <link rel="manifest" href="images/favicon/site.webmanifest" />
         <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#2b5797" />
         <meta name="theme-color" content="#ffffff" />
 
         <!-- seo 적용 -->
-        <meta name="naver-site-verification" content="5b0d2018b8cf07cac61b278a1705fc4a4ac45bdb" />
         <meta name="description" content="탄소중립 대응 친환경 플라스틱 신소재 전문업체 " />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="애니켐" />
@@ -48,9 +46,9 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <!-- anime.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- Swiper -->
+        <link rel="stylesheet" href="js/swiper/css/swiper.css" />
+        <script src="js/swiper/js/swiper.js"></script>
 
         <!-- js파일 연동 -->
         <script src="js/script.js"></script>
@@ -190,7 +188,7 @@
 
             <!-- 비주얼 -->
             <section class-="visual">
-                <div class="swiper sw-visual">
+                <div class="swiper-container sw-visual">
                     <div class="swiper-wrapper">
                         <!-- json연동 -->
                     </div>
@@ -236,7 +234,7 @@
                         </div>
                     </div>
                     <div class="goods-slide">
-                        <div class="swiper sw-goods">
+                        <div class="swiper-container sw-goods">
                             <div class="swiper-wrapper">
                                 <!--json으로 관리 -->
                             </div>
@@ -248,7 +246,24 @@
 
             <!-- 컴퍼니 -->
             <section class="company">
-                <div class="inner"></div>
+                <div class="inner">
+                    <div class="company-wrap">
+                        <h2>저탄소사회 구현을 위한 최고의 선택</h2>
+                        <p>
+                            탄소중립 대응 친환경 제품을 끊임없이 도전, <br />
+                            연구하는 소재전문 업체입니다.
+                        </p>
+                        <div class="company-list">
+                            <div class="company-box">
+                                <div class="company-qa">
+                                </div>
+                            </div>
+                            <div class="company-box">
+                                <div class="company-about"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- //컴퍼니 -->
 
