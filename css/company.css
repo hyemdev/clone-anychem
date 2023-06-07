@@ -1,51 +1,26 @@
 .company {
+    position: relative;
+    margin-top: 200px;
 }
-.company .inner {
-}
-.company-wrap {
-}
-.company-wrap h2 {
+.company .inner .company-wrap h2 {
+    font-weight: 500;
     font-size: 47px;
+    padding: 40px 0;
     text-align: center;
+    line-height: 1.3;
     color: #000;
-    font-weight: 700;
+    letter-spacing: -0.5px;
 }
-
-.company-wrap p {
+.company .inner .company-wrap p {
     font-size: 17px;
     text-align: center;
-    margin: 30px 0;
-    padding-bottom: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.3px;
+    margin-bottom: 40px;
 }
 .company-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 240px 240px;
-    gap: 15px;
 }
-
-.company-box {
-    border-radius: 25px;
-    grid-row: 1 / 3;
-    overflow: hidden;
-}
-.company-qa {
-    padding: 50px;
-    width: 100%;
-    height: 100%;
-    background: #0072ff;
-}
-.company-about {
-    padding: 50px;
-    width: 100%;
-    height: 100%;
-    background: url("../images/cpn_bg.jpg") no-repeat center;
-    background-size: cover;
-}
-
-@media screen and (max-width: 760px) {
-    .company-box {
-        grid-column: 1 / 3;
-        grid-row: auto;
-    }
-}
+.company-list .company-box {
+    position: relative;
+} /*# sourceMappingURL=company.css.map */

@@ -1,0 +1,34 @@
+.company {
+    position: relative;
+    margin-top: 200px;
+    .inner {
+        .company-wrap {
+            h2 {
+                font: {
+                    weight: 500;
+                    size: 47px;
+                }
+                padding: 40px 0;
+                text-align: center;
+                line-height: 1.3;
+                color: #000;
+                letter-spacing: -0.5px;
+            }
+            p {
+                font : {
+                    size: 17px;
+                }
+                text-align: center;
+                line-height: 1.6;
+                letter-spacing: -0.3px;
+                margin-bottom: 40px;
+            }
+            @at-root .company-list {
+                display: grid;
+                .company-box {
+                    position: relative;
+                }
+            }
+        }
+    }
+}
