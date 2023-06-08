@@ -1,26 +1,144 @@
 .company {
-    position: relative;
-    margin-top: 200px;
+  position: relative;
+  margin-top: 200px;
 }
-.company .inner .company-wrap h2 {
-    font-weight: 500;
-    font-size: 47px;
-    padding: 40px 0;
-    text-align: center;
-    line-height: 1.3;
-    color: #000;
-    letter-spacing: -0.5px;
+.company .inner .company-wrap > h2 {
+  font-weight: 700;
+  font-size: 47px;
+  padding: 40px 0;
+  text-align: center;
+  line-height: 1.3;
+  color: #000;
+  letter-spacing: -0.5px;
 }
-.company .inner .company-wrap p {
-    font-size: 17px;
-    text-align: center;
-    line-height: 1.6;
-    letter-spacing: -0.3px;
-    margin-bottom: 40px;
+.company .inner .company-wrap > p {
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
+  margin-bottom: 40px;
+  color: rgba(0, 0, 0, 0.5);
 }
 .company-list {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 15px;
 }
 .company-list .company-box {
-    position: relative;
-} /*# sourceMappingURL=company.css.map */
+  position: relative;
+}
+.company-list .company-box > div {
+  padding: 50px;
+  border-radius: 27px;
+  height: 480px;
+}
+.company-list .company-box > div > span {
+  color: #fff;
+  display: block;
+  margin-bottom: 12px;
+  font-size: 17px;
+  font-weight: 300;
+}
+.company-list .company-box > div > p {
+  color: #fff;
+  display: block;
+  line-height: 1.5;
+  font-size: 27px;
+  font-weight: 600;
+}
+.company-list .company-box > div > a {
+  padding: 0 25px;
+  margin-top: 35px;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 52px;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  color: #fff;
+  border-radius: 30px;
+}
+.company-list .company-box > div > a > i {
+  display: inline-block;
+  margin-left: 45px;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+.company-list .company-box > div > a:hover i {
+  animation-name: icon-ani;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+}
+.company-list .company-box .company-qa {
+  position: relative;
+  background: #0072ff;
+}
+.company-list .company-box .company-qa .qa-img {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  transition: all 0.5s;
+}
+.company-list .company-box .company-about {
+  background: url("../images/cpn_bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1500px) {
+  .company-wrap {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .company {
+    margin-top: 50px;
+  }
+  .company-list .company-box > div {
+    height: 430px;
+    padding: 35px;
+  }
+  .company-list .company-box > div > p {
+    font-size: 23px;
+  }
+  .company-list .company-box .qa-img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .company {
+    margin-top: 40px;
+  }
+  .company-wrap > h2 {
+    font-size: 25px !important;
+    margin-bottom: 15px !important;
+    padding: 0 !important;
+  }
+  .company-wrap > p {
+    font-size: 15px;
+  }
+  .company-wrap .company-list {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  .company-wrap .company-box {
+    overflow: hidden;
+  }
+  .company-wrap .company-box > div {
+    height: 244px !important;
+  }
+  .company-wrap .company-box .qa-img {
+    width: 40%;
+    opacity: 0.8;
+    bottom: 0;
+  }
+  .company-qa > a {
+    background: #fff !important;
+    color: #0072ff !important;
+  }
+  .company-about > a {
+    background: #000 !important;
+  }
+}/*# sourceMappingURL=company.css.map */
