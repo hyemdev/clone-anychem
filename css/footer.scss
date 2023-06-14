@@ -1,0 +1,104 @@
+.footer {
+    background: #131618;
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 25px;
+        .footer-addr {
+            h2 {
+                font-size: 17px;
+                font-weight: 700;
+                color: #fff;
+                margin-bottom: 35px;
+            }
+
+            .footer-info-list {
+                li {
+                    margin: 8px 0;
+                    a {
+                        display: inline-block;
+                        border-radius: 30px;
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: #fff;
+                        padding: 7px 12px;
+                        margin: 0 2px;
+                        margin-bottom: 25px;
+                    }
+                    .span {
+                        font-size: 15px;
+                        display: inline-block;
+                        color: #868686;
+                    }
+                    strong {
+                        color: #0072ff;
+                    }
+                    .private-rule {
+                        border: 1px solid #0072ff;
+                    }
+
+                    .docu {
+                        border: 1px solid #fff;
+                    }
+                    .bar::after {
+                        content: "";
+                        display: inline-block;
+                        width: 1px;
+                        height: 10px;
+                        background: #434a3f;
+                        margin: 0 10px;
+                    }
+                    .copy {
+                        margin: 15px 0 40px;
+                        color: #777;
+                    }
+                }
+            }
+            .site-link {
+                a {
+                    font-family: "inter";
+                    font-size: 13px;
+                    font-weight: 900;
+                    color: #979797;
+                }
+            }
+        }
+        .footer-sitemap {
+            .site-map {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 40px;
+                li {
+                    .site-map-main {
+                        color: #fff;
+                        font-weight: 700;
+                    }
+                    .site-map-sub {
+                        margin-top: 30px;
+                        
+                        li {
+                            a {
+                                font-size: 15px;
+                                color: #929698;
+                                line-height: 2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .footer {
+        .inner {
+            padding: 60px 20px;
+            .footer-sitemap {
+                display: none;
+            }
+        }
+    }
+    
+}

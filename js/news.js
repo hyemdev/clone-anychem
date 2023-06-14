@@ -22,14 +22,34 @@ window.addEventListener("load", function () {
                     <a href="${item.link}">
                         <span>${item.cate}</span>
                         <p>${item.title}</p>
-                        <span><i class="fa-regular fa-clock"></i>${item.date}</span>
+                        <span class=news-box-date><i class="fa-regular fa-clock"></i>${item.date}</span>
                     </a>
                 </div>
             </div>
             `;
             html += tag;
         });
-        console.log(html);
+        const newsWrap = document.querySelector(".sw-news > .swiper-wrapper");
+        newsWrap.innerHTML = html;
+        // swiper 생성
+        new Swiper(".sw-news", {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            loop: true,
+            breakpoints: {
+                1200: { slidesPerView: 3, spaceBetween: 10 },
+                768: { slidesPerView: 2, spaceBetween: 10 },
+            },
+            pagination: {
+                el: ".sw-news-pg",
+                clickable: true,
+            },
+            speed: 800,
+            autoplay: {
+                delay: 2500,
+
+            }
+        });
     };
     getNews();
 });

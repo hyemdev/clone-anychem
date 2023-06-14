@@ -1,0 +1,157 @@
+.info {
+    background: #f5f9ff;
+    .inner {
+        padding: 60px 10px;
+        .info-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            // gap: 40px;
+            grid-auto-rows: auto;
+            .info-map {
+                padding-right: 40px;
+                border-right: 1px solid #ddd;
+                .info-map-link {
+                    position: relative;
+                    .info-map-title {
+                        display: block;
+                        font-size: 20px;
+                        font-weight: 700;
+                        padding-bottom: 20px;
+                        i {
+                            float: right;
+                            font-size: 12px;
+                            line-height: 31px;
+                        }
+                    }
+                    .info-map-txt {
+                        position: relative;
+                        color: #888;
+                        font-size: 15px;
+                        z-index: 1;
+                    }
+                    .info-map-img {
+                        position: absolute;
+                        right: 0;
+                        top: 30px;
+                    }
+                }
+            }
+            .info-notice {
+                padding: 0 40px;
+                &-title {
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 700;
+                    padding-bottom: 20px;
+                    i {
+                        float: right;
+                        font-size: 12px;
+                        line-height: 31px;
+                    }
+                }
+                &-list {
+                    font-size: 15px;
+                    // font-weight: 200;
+                }
+            }
+            .info-faq {
+                color: #fff;
+                background: #006aec url("../images/bn3_bg.png") no-repeat center;
+                background-size: cover;
+                border-radius: 20px;
+                font-size: 14px;
+                padding: 35px 25px;
+                &-title {
+                    display: block;
+                    color: #fff;
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+                &-tel {
+                    position: relative;
+                    display: block;
+                    font-size: 23px;
+                    font-weight: 700;
+                    font-family: "inter";
+                    padding: 5px 0;
+                }
+                &-mail {
+                    display: block;
+                    color: rgba($color: #fff, $alpha: 0.4);
+
+                    font-family: "inter";
+                }
+                &-link {
+                    color: #fff;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                    border: 1px solid #fff;
+                    border-radius: 30px;
+                    padding: 5px 15px;
+                    font-family: "Noto Sans KR";
+
+                    font-weight: 400;
+                    i {
+                        font-size: 10px;
+                        color: #fff;
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .info {
+        .inner {
+            padding: 50px 10px;
+            .info-wrap {
+                grid-template-columns: 1fr 1fr;
+                row-gap: 40px;
+                .info-map {
+                    padding-right: 20px;
+                }
+                .info-notice {
+                    padding: 0;
+                    padding-left: 20px;
+                }
+                .info-faq {
+                    grid-column: 1/3;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .info {
+        .inner {
+            .info-wrap {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                row-gap: 10px;
+                .info-map {
+                    background: #fff;
+                    border-radius: 20px;
+                    padding: 25px;
+                    border-right: 0;
+                    .info-map-img {
+                        width: 100px;
+                    }
+                }
+                .info-notice {
+                    border-radius: 20px;
+                    padding: 25px !important;
+                    background: #fff;
+                    padding: 0;
+                }
+                .info-faq {
+                    grid-column: auto;
+                }
+            }
+        }
+    }
+}

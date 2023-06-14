@@ -148,7 +148,7 @@
 }
 .sw-goods .swiper-slide-active .good-item {
     height: 550px;
-    box-shadow: 0 6px 31px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 30px 1px rgba(0, 0, 0, 0.1);
 }
 
 .focus::before {
@@ -190,6 +190,9 @@
 @media screen and (max-width: 1000px) {
     .goods {
         margin: 65px 0;
+    }
+    .sw-goods {
+        padding-top: 50px !important;
     }
     .goods-menu {
         padding-left: 0px;

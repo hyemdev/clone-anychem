@@ -44,6 +44,8 @@
                             font-weight: 300;
                         }
                         > p {
+                            z-index: 9;
+                            position: relative;
                             color: #fff;
                             display: block;
                             line-height: 1.5;
@@ -126,42 +128,44 @@
     .company {
         margin-top: 40px;
     }
-    .company-wrap {
-        > h2 {
-            font-size: 25px !important;
-            margin-bottom: 15px !important;
-            padding: 0 !important;
-        }
-
-        > p {
-            font-size: 15px;
-        }
-
-        .company-list {
-            grid-template-columns: 1fr !important;
-            gap: 8px !important;
-        }
-        .company-box {
-            overflow: hidden;
-            > div {
-                height: 244px !important;
+    .inner {
+        .company-wrap {
+            > h2 {
+                font-size: 25px;
+                margin-bottom: 15px;
+                padding: 0;
             }
-            .qa-img {
-                width: 40%;
-                opacity: 0.8;
-                bottom: 0;
+
+            > p {
+                font-size: 15px;
+            }
+
+            .company-list {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .company-box {
+                overflow: hidden;
+                > div {
+                    height: 244px;
+                }
+                .qa-img {
+                    width: 40%;
+                    opacity: 0.8;
+                    bottom: 0;
+                }
+            }
+        
+        .company-qa {
+            > a {
+                background: #fff;
+                color: #0072ff;
             }
         }
-    }
-    .company-qa {
-        > a {
-            background: #fff !important;
-            color: #0072ff !important;
+        .company-about {
+            > a {
+                background: #000;
+            }
         }
-    }
-    .company-about {
-        > a {
-            background: #000 !important;
-        }
-    }
+    }}
 }
