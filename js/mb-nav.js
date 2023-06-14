@@ -1,4 +1,14 @@
 window.addEventListener("load", function () {
+    //모달창 처리
+    //스크롤 없애기
+    let body = document.querySelector("body");
+    body.classList.add("modal-active");
+    //클릭하면 사라지게 만들기
+    let modal = document.querySelector(".modal");
+    modal.onclick = function () {
+        body.classList.remove("modal-active");
+        this.style.display = "none";
+    };
     // 모바일 버튼
     // mbNav라는 이름의 변수에 html의 mb-nav의 클래스를 저장한다.
     // (css에서 클래스를 불러오듯이 작성하면 됨)
@@ -73,9 +83,7 @@ window.addEventListener("load", function () {
     // 모바일 아코디언 메뉴
     const sideLis = document.querySelectorAll(".mb-side-menu > li");
     const sideMenuA = document.querySelectorAll(".mb-side-menu > li > a");
-    const mbSubMenu = document.querySelectorAll(
-        ".mb-side-menu > li > .submenu"
-    );
+    const mbSubMenu = document.querySelectorAll(".mb-side-menu > li > .submenu");
     const sideMenuOffset = 53;
     let sideOpenNumber;
 
