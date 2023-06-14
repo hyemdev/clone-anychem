@@ -4,7 +4,6 @@
 //웹브라우저에 html , css , js , image를 모두 불러들여서 렌더링 준비가 끝나면
 //그때 function의 블럭 안쪽 { } 실행하라!
 window.addEventListener("load", function () {
-
     // toggle 기능 사용해보기
     // mbNav.classList.toggle("mb-nav-active");
 
