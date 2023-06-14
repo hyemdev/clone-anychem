@@ -70,6 +70,7 @@
 @media screen and (max-width: 768px) {
   .news .inner {
     padding: 15px 10px;
+    margin-bottom: 50px;
   }
   .news .inner .news-box {
     padding: 40px 25px !important;

@@ -25,7 +25,7 @@
   margin: 0 2px;
   margin-bottom: 25px;
 }
-.footer .inner .footer-addr .footer-info-list li .span {
+.footer .inner .footer-addr .footer-info-list li span {
   font-size: 15px;
   display: inline-block;
   color: #868686;
@@ -47,7 +47,7 @@
   background: #434a3f;
   margin: 0 10px;
 }
-.footer .inner .footer-addr .footer-info-list li .copy {
+.footer .inner .footer-addr .footer-info-list li .copyright {
   margin: 15px 0 40px;
   color: #777;
 }
@@ -64,6 +64,7 @@
   gap: 40px;
 }
 .footer .inner .footer-sitemap .site-map li .site-map-main {
+  font-size: 15px;
   color: #fff;
   font-weight: 700;
 }

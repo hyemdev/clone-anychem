@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 1500px) {
-  .company-wrap {
+  .company .inner .company-wrap {
     padding: 0 10px;
   }
 }
@@ -98,49 +98,52 @@
   .company {
     margin-top: 50px;
   }
-  .company-list .company-box > div {
+  .company .inner .company-wrap {
+    padding: 0 10px;
+  }
+  .company .inner .company-wrap .company-list .company-box > div {
     height: 430px;
     padding: 35px;
   }
-  .company-list .company-box > div > p {
+  .company .inner .company-wrap .company-list .company-box > div > p {
     font-size: 23px;
   }
-  .company-list .company-box .qa-img {
+  .company .inner .company-wrap .company-list .company-box > div > p .qa-img {
     width: 50%;
   }
 }
 @media screen and (max-width: 768px) {
   .company {
-    margin-top: 40px;
+    margin-top: 60px;
   }
-  .inner .company-wrap > h2 {
+  .company .inner .company-wrap > h2 {
     font-size: 25px;
-    margin-bottom: 15px;
-    padding: 0;
+    margin-bottom: 15px !important;
+    padding: 0 !important;
   }
-  .inner .company-wrap > p {
-    font-size: 15px;
+  .company .inner .company-wrap > p {
+    font-size: 15px !important;
   }
-  .inner .company-wrap .company-list {
+  .company .inner .company-wrap .company-list {
     grid-template-columns: 1fr;
     gap: 8px;
   }
-  .inner .company-wrap .company-box {
+  .company .inner .company-wrap .company-list .company-box {
     overflow: hidden;
   }
-  .inner .company-wrap .company-box > div {
+  .company .inner .company-wrap .company-list .company-box > div {
     height: 244px;
   }
-  .inner .company-wrap .company-box .qa-img {
+  .company .inner .company-wrap .company-list .company-box .qa-img {
     width: 40%;
     opacity: 0.8;
     bottom: 0;
   }
-  .inner .company-wrap .company-qa > a {
+  .company .inner .company-wrap .company-list .company-box .company-qa > a {
     background: #fff;
     color: #0072ff;
   }
-  .inner .company-wrap .company-about > a {
+  .company .inner .company-wrap .company-list .company-box .company-about > a {
     background: #000;
   }
 }/*# sourceMappingURL=company.css.map */

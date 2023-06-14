@@ -12,6 +12,8 @@
     padding: 0 100px;
     transition: height 0.5s, padding 0.5s;
     z-index: 9999;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 .header::before {
     content: "";
@@ -33,7 +35,6 @@
 .header-fixed {
     position: fixed !important;
     top: 0;
-    left: 0;
     width: 100%;
 }
 .header-active::before {
